@@ -2,7 +2,7 @@
 
 This repo contains several test cases of preconnect feature to electron (https://github.com/electron/electron).
 
-BUILDING ELECTRON (for linux)
+# BUILDING ELECTRON (for linux)
 1) Check prerequisites from guide (https://electronjs.org/docs/development/build-instructions-linux#prerequisites).
 2) // fetching code  (following instructions from https://electronjs.org/docs/development/build-instructions-gn)
 
@@ -18,7 +18,7 @@ export GN_EXTRA_ARGS="${GN_EXTRA_ARGS} cc_wrapper=\"${PWD}/electron/external_bin
 gn gen out/Debug --args="import(\"//electron/build/args/debug.gn\") $GN_EXTRA_ARGS"
 ninja -C out/Debug electron
 
-RUNNING TEST CASES
+# RUNNING TEST CASES
 to run any cases:
 1) <path-to-elector-bin-dir>/electron --log-net-log=net.log.json electron-quick-start-rheader
 	or
