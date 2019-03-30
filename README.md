@@ -2,7 +2,8 @@
 
 This repo contains several test cases of preconnect feature to electron (https://github.com/electron/electron).
 
-# BUILDING ELECTRON (for linux)
+BUILDING ELECTRON (for linux)
+
 1) Check prerequisites from guide (https://electronjs.org/docs/development/build-instructions-linux#prerequisites).
 2) // fetching code  (following instructions from https://electronjs.org/docs/development/build-instructions-gn)
 
@@ -17,6 +18,7 @@ export CHROMIUM_BUILDTOOLS_PATH=`pwd`/buildtools
 export GN_EXTRA_ARGS="${GN_EXTRA_ARGS} cc_wrapper=\"${PWD}/electron/external_binaries/sccache\""
 gn gen out/Debug --args="import(\"//electron/build/args/debug.gn\") $GN_EXTRA_ARGS"
 ninja -C out/Debug electron
+
 
 # RUNNING TEST CASES
 to run any cases:
@@ -39,8 +41,8 @@ in events section
 HTTP_STREAM_JOB_CONTROLLER (is_preconnect=false) and associated HTTP_STREAM_JOB to https://preconnect.herokuapp.com/
 and then HTTP_STREAM_JOB_CONTROLLER (is_preconnect=true) and associated HTTP_STREAM_JOB (num_sockets=2) to https://preconnect.herokuapp.com/
 this is chromium default preconnect behaviour
-then must be HTTP_STREAM_JOB_CONTROLLER and HTTP_STREAM_JOB to fonts.gstatic.com (is_preconnect=true, num_sockets=1)
-- this are requested by explicit response header (num_sockets==1 because origin of url != origin of frame url)
+then must be HTTP_STREAM_JOB_CONTROLLER and HTTP_STREAM_JOB to fonts.gstatic.com (is_preconnect=true, num_sockets=1) - 
+this are requested by explicit response header (num_sockets==1 because origin of url != origin of frame url)
 
 b) directory electron-quick-start-rlink - preconnect through html-link-tag to https://cdn.domain.com
 in events section
