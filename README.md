@@ -2,7 +2,7 @@
 
 This repo contains several test cases of preconnect feature to electron (https://github.com/electron/electron).
 
-BUILDING ELECTRON (for linux)
+# BUILDING ELECTRON (for linux)
 
 1) Check prerequisites from guide (https://electronjs.org/docs/development/build-instructions-linux#prerequisites).
 2) // fetching code  (following instructions from https://electronjs.org/docs/development/build-instructions-gn)
